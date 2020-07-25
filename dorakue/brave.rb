@@ -10,6 +10,7 @@ class Brave < Character
     attack_type = decision_attack_type
     damage = calculate_damage(target: monster, attack_type: attack_type)
     cause_damage(target: monster, damage: damage)
+
     attack_message(attack_type: attack_type)
     damage_message(target: monster, damage: damage)
   end
@@ -42,7 +43,6 @@ class Brave < Character
       target = params[:target]
 
       target.hp -= damage
-
       target.hp = 0 if target.hp < 0
     end
 

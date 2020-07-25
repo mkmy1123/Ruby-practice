@@ -22,9 +22,9 @@ class Monster < Character
       @is_angry = true
       transform
     end
+
     damage = calculate_damage(brave)
     cause_damage(target: brave, damage: damage)
-
     attack_message
     damage_message(target: brave, damage: damage)
   end
@@ -41,14 +41,13 @@ class Monster < Character
       target = params[:target]
 
       target.hp -= damage
-
       target.hp = 0 if target.hp < 0
-
-      puts "#{target.name}は#{damage}のダメージを受けた"
     end
 
     def transform
       transform_name = "ドラゴン"
+
+      transform_message(origin_name: @name, transform_name: transform_name)
 
       @offense *= POWER_UP_RATE
       @name = transform_name
