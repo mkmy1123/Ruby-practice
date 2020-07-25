@@ -1,5 +1,7 @@
+require './message_dialog.rb'
 
 class Character
+  include MessageDialog
   attr_reader :offense, :defense
   attr_accessor :hp, :name
 

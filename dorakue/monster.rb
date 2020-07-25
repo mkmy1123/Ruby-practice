@@ -22,12 +22,9 @@ class Monster < Character
       @is_angry = true
       transform
     end
-    puts "#{@name}の攻撃"
-
+    attack_message
     damage = calculate_damage(brave)
-
     cause_damage(target: brave, damage: damage)
-
     puts "#{brave.name}の残りHPは#{brave.hp}だ"
   end
 
