@@ -1,19 +1,10 @@
 
-class Brave
+require './character.rb'
 
-  attr_reader :name, :offense, :defense
-  attr_accessor :hp
-
+class Brave < Character
 
   # 必殺攻撃に使う定数
   SPECIAL_ATTACK_CONSTANT = 1.5
-
-  def initialize(**params)
-    @name = params[:name]
-    @hp = params[:hp]
-    @offense = params[:offense]
-    @defense = params[:defense]
-  end
 
   def attack(monster)
     puts "#{@name}の攻撃"
@@ -69,19 +60,18 @@ class Brave
 
 end
 
-class Monster
-
-  attr_reader :defense, :offense
-  attr_accessor :hp, :name
+class Monster < Character
 
   POWER_UP_RATE = 1.5
   CALC_HALF_UP = 0.5
 
   def initialize(**params)
-    @name = params[:name]
-    @hp = params[:hp]
-    @offense = params[:offense]
-    @defense = params[:defense]
+    super(
+      name: params[:name],
+      hp: params[:hp],
+      offense: params[:offense],
+      defense: params[:defense]
+    )
     @is_angry = false
     @trigger_of_transform = params[:hp] * CALC_HALF_UP
   end
