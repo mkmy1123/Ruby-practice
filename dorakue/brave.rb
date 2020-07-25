@@ -11,7 +11,7 @@ class Brave < Character
     damage = calculate_damage(target: monster, attack_type: attack_type)
     cause_damage(target: monster, damage: damage)
     attack_message(attack_type: attack_type)
-    # puts "#{monster.name}の残りHPは#{monster.hp}だ"
+    damage_message(target: monster, damage: damage)
   end
 
   private
@@ -20,10 +20,8 @@ class Brave < Character
       attack_num = rand(4)
 
       if attack_num == 0
-        puts "必殺攻撃"
         "special_attack"
       else
-        puts "通常攻撃"
         "normal_attack"
       end
     end
