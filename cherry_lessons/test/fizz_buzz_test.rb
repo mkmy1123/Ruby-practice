@@ -1,4 +1,3 @@
-
 require 'minitest/autorun'
 require './lib/fizz_buzz'
 
