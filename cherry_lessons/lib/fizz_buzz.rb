@@ -1,4 +1,3 @@
-
 def fizz_buzz(n)
 	if n % 15 == 0
 		'Fizz Buzz'
@@ -10,4 +9,3 @@ def fizz_buzz(n)
 		n.to_s
 	end
 end
-

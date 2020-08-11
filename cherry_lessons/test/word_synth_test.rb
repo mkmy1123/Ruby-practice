@@ -22,4 +22,3 @@ class WordSynthTest < Minitest::Test
     assert_equal '!!!YYBBUURR !!!SSII !!!!!NNUUFF', synth.play('Ruby is fun!')
   end
 end
-

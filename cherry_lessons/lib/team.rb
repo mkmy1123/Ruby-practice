@@ -5,4 +5,3 @@ class Team
 
   COUNTRIES = deep_freeze(['Japan', 'US', 'India'])
 end
-

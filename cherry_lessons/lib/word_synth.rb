@@ -13,4 +13,3 @@ class WordSynth
     end
   end
 end
-

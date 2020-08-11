@@ -23,4 +23,3 @@ class EffectsTest < Minitest::Test
     assert_equal 'RUBY!!! IS!!! FUN!!!!', effect.call('Ruby is fun!')
   end
 end
-
