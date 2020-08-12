@@ -1,20 +1,46 @@
 def cels_to_fahr(cels)
-  cels * 9 / 5 + 35
+  cels * 9.0 / 5.0 + 32.0
 end
 
 def fahr_to_cehr(fahr)
-  (fahr - 35) * 5 / 9
+  (fahr - 32.0) * 5.0 / 9.0
 end
 
 100.times do |i|
-  puts fahr_to_cehr(i)
+  puts "摂氏#{i}度: 華氏#{(fahr_to_cehr(i)).round}度"
 end
 
 def dice
-  n = 0
-  while n != 0 do
-    n = Random.rand(6)
-    return n
+  Random.rand(6) + 1
+end
+
+def dice10
+  answer = 0
+  10.times do
+    answer += dice
+  end
+  answer
+end
+
+def prime?(num)
+  return false if num < 2
+  2.upto(num) do |i|
+    if num % i == 0
+      return false
+      break
+    end
+    return true
   end
 end
-puts dice
+
+# 解答
+# def prime?(num)
+#   return false if num < 2
+#   2.upto(Math.sqrt(num)) do |i|
+#     if num % i == 0
+#       return false
+#     end
+#   end
+#   return true
+# end
+
