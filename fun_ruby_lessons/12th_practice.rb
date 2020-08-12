@@ -1,3 +1,5 @@
+# 12章は数値（Numeric）クラス
+
 def cels_to_fahr(cels)
   cels * 9.0 / 5.0 + 32.0
 end
