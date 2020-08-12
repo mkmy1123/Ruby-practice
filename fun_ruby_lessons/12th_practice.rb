@@ -34,6 +34,10 @@ def prime?(num)
 end
 
 # 解答
+# 平方根を使う理由はまだよくわからない（数学的に）
+# ただRubyで明示的にreturnを返せば処理終了するので
+# 間違いなくbreakは書かなくてよかった・_・
+
 # def prime?(num)
 #   return false if num < 2
 #   2.upto(Math.sqrt(num)) do |i|
