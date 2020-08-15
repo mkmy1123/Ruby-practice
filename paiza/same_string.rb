@@ -3,7 +3,7 @@ a = gets.to_s
 b = gets.to_s
 
 if a == b
-    puts "OK"
+  puts "OK"
 else
-    puts "NG"
+  puts "NG"
 end

@@ -3,7 +3,7 @@
 # 1万歩を歩いているかどうかを判定して結果を出力してください。
 
 def km_to_cm(km)
-    km * 1000 * 100
+  km * 1000 * 100
 end
 
 km, cm = gets.split(' ').map(&:to_i)
@@ -11,8 +11,8 @@ km, cm = gets.split(' ').map(&:to_i)
 answer = km_to_cm(km) / cm
 
 if answer >= 10000
-    puts "yes"
+  puts "yes"
 else
-    puts "no"
+  puts "no"
 end
 
