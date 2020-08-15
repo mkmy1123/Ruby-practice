@@ -7,10 +7,10 @@ n.times do
     answer << i
   else
     answer.each_with_index do |ans, idx|
-        if i <= ans
-          answer.insert(idx,i)
-          break
-        end
+      if i <= ans
+        answer.insert(idx,i)
+        break
+      end
     end
   end
 end
