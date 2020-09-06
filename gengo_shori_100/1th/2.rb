@@ -5,7 +5,7 @@ sentence = "Now I need a drink, alcoholic of course, after the heavy lectures in
 ary = sentence.split(' ')
 result = []
 
-ary.each_with_index do |word|
+ary.each do |word|
   result << word.length
 end
 
