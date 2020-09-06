@@ -5,12 +5,12 @@ sentence = "Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Mig
 ary = sentence.split(' ')
 result = []
 
-ary.each_with_index do |word, idx|
-  case idx + 1
+ary.each.with_index(1) do |word, idx|
+  case idx
   when 1, 5, 6, 7, 8, 9, 15, 16, 19
-    result << {idx + 1 => ary[idx][0, 1]}
+    result << {idx => ary[idx - 1][0, 1]}
   else
-    result << {idx + 1 => ary[idx][0, 2]}
+    result << {idx => ary[idx - 1][0, 2]}
   end
 end
 
