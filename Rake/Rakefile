@@ -1,0 +1,18 @@
+CC = "gcc"
+
+task default: :cleanup
+
+desc "remove temporary file"
+task cleanup: ["greeting"] do |t|
+  sh "rm #{t.prerequisites[0]}.o"
+end
+
+desc "rename executable file"
+file greeting: ["greeting.o"] do |t|
+  sh "#{CC} -o #{t.name} #{t.prerequisites.join(' ')}"
+end
+
+desc "compile"
+file "greeting.o" => "greeting.c" do |t|
+  sh "#{CC} -c #{t.prerequisites[0]}"
+end
